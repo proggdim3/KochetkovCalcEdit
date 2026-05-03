@@ -1,0 +1,81 @@
+﻿<Window x:Class="KochetkovWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Кочетков Калькулятор" Height="500" Width="350"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- поле ввода чисел и результата -->
+        <TextBox x:Name="InputTextBox" 
+                 Grid.Row="0" 
+                 FontSize="20" 
+                 IsReadOnly="True"
+                 Background="White"
+                 Text="0"/>
+
+        <!-- поле отображения вычисления -->
+        <TextBox x:Name="ResultTextBox" 
+                 Grid.Row="1" 
+                 FontSize="14" 
+                 IsReadOnly="True"
+                 Background="LightGray"/>
+
+        <!-- сетка с кнопками -->
+        <Grid Grid.Row="2" Margin="0,5,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- 1ряд -->
+            <Button Content="(" Grid.Row="0" Grid.Column="0" Click="LeftParenthesis_Click" FontSize="20" Background="LightBlue"/>
+            <Button Content=")" Grid.Row="0" Grid.Column="1" Click="RightParenthesis_Click" FontSize="20" Background="LightBlue"/>
+            <Button Content="C" Grid.Row="0" Grid.Column="2" Click="Clear_Click" FontSize="20" Background="OrangeRed"/>
+            <Button Content="⌫" Grid.Row="0" Grid.Column="3" Click="Backspace_Click" FontSize="16" Background="LightGray"/>
+
+            <!-- 2ряд -->
+            <Button Content="7" Grid.Row="1" Grid.Column="0" Click="Button_Click" FontSize="20"/>
+            <Button Content="8" Grid.Row="1" Grid.Column="1" Click="Button_Click" FontSize="20"/>
+            <Button Content="9" Grid.Row="1" Grid.Column="2" Click="Button_Click" FontSize="20"/>
+            <Button Content="/" Grid.Row="1" Grid.Column="3" Click="Operator_Click" FontSize="20"/>
+
+            <!-- 3ряд -->
+            <Button Content="4" Grid.Row="2" Grid.Column="0" Click="Button_Click" FontSize="20"/>
+            <Button Content="5" Grid.Row="2" Grid.Column="1" Click="Button_Click" FontSize="20"/>
+            <Button Content="6" Grid.Row="2" Grid.Column="2" Click="Button_Click" FontSize="20"/>
+            <Button Content="*" Grid.Row="2" Grid.Column="3" Click="Operator_Click" FontSize="20"/>
+
+            <!-- 4ряд -->
+            <Button Content="1" Grid.Row="3" Grid.Column="0" Click="Button_Click" FontSize="20"/>
+            <Button Content="2" Grid.Row="3" Grid.Column="1" Click="Button_Click" FontSize="20"/>
+            <Button Content="3" Grid.Row="3" Grid.Column="2" Click="Button_Click" FontSize="20"/>
+            <Button Content="-" Grid.Row="3" Grid.Column="3" Click="Operator_Click" FontSize="20"/>
+
+            <!-- 5ряд -->
+            <Button Content="0" Grid.Row="4" Grid.Column="0" Click="Button_Click" FontSize="20"/>
+            <Button Content="." Grid.Row="4" Grid.Column="1" Click="Dot_Click" FontSize="20"/>
+            <Button Content="^" Grid.Row="4" Grid.Column="2" Click="Operator_Click" FontSize="20"/>
+            <Button Content="+" Grid.Row="4" Grid.Column="3" Click="Operator_Click" FontSize="20"/>
+
+            <!-- 6ряд -->
+            <Button Content="=" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" 
+                    Click="Equals_Click" FontSize="20" Background="LightGreen"/>
+        </Grid>
+    </Grid>
+</Window>

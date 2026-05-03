@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="KochetkovLibraryFramework/KochetkovLibraryFramework.csproj" Id="8ac3acec-e02f-4d24-91c9-9119a369b1fd" />
+  <Project Path="KochetkovTests/KochetkovTests.csproj" Id="d5bfe69c-29ae-4245-b2f5-3fbc7cc8b169" />
+  <Project Path="KochetkovWPF/KochetkovWPF.csproj" Id="eea0460d-873b-4350-bdad-f12c8ffce937" />
+</Solution>
